@@ -1,0 +1,16 @@
+{
+  "name": "csv-data",
+  "version": "1.0.0",
+  "description": "csv data to html table",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^26.2.4",
+    "papaparse": "^5.4.1"
+  }
+}
