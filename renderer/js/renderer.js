@@ -40,9 +40,9 @@ fileInput.addEventListener("change", (e) => {
 // Handle the file when it's dropped
 dropArea.addEventListener("drop", (e) => {
   e.preventDefault();
+  const files = e.dataTransfer.files;
   sideContainer.style.width = "720px";
-  const filed = e.target.files[0];
-  window.electron.parseCSV(filed, displayCSV);
+  window.electron.parseCSV(files[0], displayCSV);
 });
 
 // Highlight the drop area when a file is dragged over it
