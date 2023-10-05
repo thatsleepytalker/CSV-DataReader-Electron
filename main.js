@@ -6,8 +6,8 @@ let mainWindow;
 function createWindow() {
   mainWindow = new BrowserWindow({
     title: "CSV Reader",
-    width: 800,
-    height: 600,
+    width: 1080,
+    height: 720,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: true,
@@ -15,7 +15,7 @@ function createWindow() {
     },
   });
 
-  mainWindow.loadFile(path.join(__dirname, "index.html"));
+  mainWindow.loadFile(path.join(__dirname, "renderer/index.html"));
 }
 
 app.on("ready", createWindow);

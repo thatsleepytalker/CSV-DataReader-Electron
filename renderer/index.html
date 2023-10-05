@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>CSV Viewer</title>
+  </head>
+
+  <body>
+    <div class="flex-container">
+      <div class="main-container">
+        <div class="upload-container">
+          <input type="file" id="fileInput" hidden />
+          <div class="drop-area" id="dropArea">
+            <p>
+              Drag & Drop your file here or
+              <span class="clickable">click to upload</span>
+            </p>
+          </div>
+        </div>
+        <button class="toggle-button">Open</button>
+      </div>
+
+      <div class="side-container">
+        <div class="content"></div>
+      </div>
+    </div>
+    <script src="js/renderer.js"></script>
+  </body>
+</html>
