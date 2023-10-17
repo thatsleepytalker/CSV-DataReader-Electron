@@ -66,3 +66,7 @@ table {
 td {
   border: 2px solid black;
 }
+
+#folder-form {
+  padding-top: 10px;
+}

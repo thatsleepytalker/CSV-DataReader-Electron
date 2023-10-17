@@ -10,6 +10,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "child-process": "^1.0.2",
     "electron": "^26.2.4",
     "papaparse": "^5.4.1"
   }

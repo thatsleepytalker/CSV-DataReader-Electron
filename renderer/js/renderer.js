@@ -4,6 +4,8 @@ const sideContainer = document.querySelector(".side-container");
 const dropArea = document.querySelector("#dropArea");
 const fileInput = document.querySelector("#fileInput");
 const contentDiv = document.querySelector(".content");
+const shellButton = document.querySelector("#shell-button");
+const folderName = document.querySelector("#folder-name");
 
 function handleFiles(files) {
   if (files.length) {
@@ -29,6 +31,32 @@ function displayCSV(data) {
 
   contentDiv.appendChild(table);
 }
+
+// TO check Shell commands
+function shellCommands(name) {
+  console.log(name);
+  if (folderNameCreate === "") {
+    window.shell.exec(`mkdir ${name}`, (error, stdout, stderr) => {
+      if (error) {
+        console.log(`error: ${error.message}`);
+        return;
+      }
+      if (stderr) {
+        console.log(`stderr: ${stderr}`);
+        return;
+      }
+      console.log(`stdout: ${stdout}`);
+    });
+  } else {
+    alert("Write a Valid Folder Name!");
+  }
+}
+
+// shell Button
+shellButton.addEventListener("click", async () => {
+  const n = await folderName.value;
+  shellCommands(n);
+});
 
 // Handle the files when the file input changes
 fileInput.addEventListener("change", (e) => {
